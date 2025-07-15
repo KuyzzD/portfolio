@@ -1,0 +1,78 @@
+
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+}
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  max-width: 480px;
+  margin: auto;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #e3e3e3;
+}
+nav a, nav button {
+  margin: 0.3rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+main {
+  padding: 1rem;
+}
+section {
+  margin-bottom: 2rem;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro {
+  text-align: center;
+  padding: 2rem 1rem;
+  animation: fadeInIntro 2s ease-out forwards;
+}
+.intro-logo {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+.intro-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.profile-pic {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  animation: zoomIn 1s ease forwards;
+}
+@keyframes fadeInIntro {
+  0% {opacity: 0; transform: scale(0.9);}
+  100% {opacity: 1; transform: scale(1);}
+}
+@keyframes zoomIn {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
+}
