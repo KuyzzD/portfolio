@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const toggleBtn = document.getElementById('toggle-theme');
   toggleBtn.addEventListener('click', function () {
     const html = document.documentElement;
-    const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'dark';
     html.setAttribute('data-theme', newTheme);
     toggleBtn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
   });
