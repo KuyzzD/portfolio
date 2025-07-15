@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const html = document.documentElement;
     const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'dark';
     html.setAttribute('data-theme', newTheme);
-    toggleBtn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    toggleBtn.textContent = newTheme === 'light' ? '☀️' : '🌙';
   });
 
   const animatedElements = document.querySelectorAll('.fade-in');
